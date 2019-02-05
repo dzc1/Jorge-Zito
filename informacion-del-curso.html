@@ -400,7 +400,10 @@
               <div class="form">
                 <div id="sendmessage">Enviame un Mensaje</div>
                 <div id="errormessage"></div>
-                <form action="" method="post" role="form" class="contactForm" netlify>
+                <form action="" method="post" role="form" class="contactForm" netlify-honeypot="bot-field" data-netlify="true">
+                    <p class="hidden">
+                        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                      </p>
                   <div class="form-group">
                     <input type="text" name="name" class="form-control" id="name" placeholder="Tu Nombre" data-rule="minlen:4" data-msg="Minimo de  4 caracteres" />
                     <div class="validation"></div>
